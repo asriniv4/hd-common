@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="Common Micro Frontend App"/>
+  <HelloWorld msg="Clinician Dashboard Micro Frontend App"/>
 </template>
 
 <script>

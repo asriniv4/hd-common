@@ -8,7 +8,6 @@ const orders = ref(null);
 const GET_RECENT_ORDERS_URL = 'https://common.ismorebetter.com/.netlify/functions/get-recent-orders';
 
 onMounted(() => {
-  console.log('recent orders mounted')
   axios.get(GET_RECENT_ORDERS_URL)
     .then((response) => {
       orders.value = response.data;

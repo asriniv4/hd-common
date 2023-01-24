@@ -1,14 +1,17 @@
 <template>
   <RecentOrders />
+  <RecentCases />
 </template>
 
 <script>
+import RecentCases from './components/RecentCases.vue';
 import RecentOrders from './components/RecentOrders.vue';
 
 
 export default {
   name: 'App',
   components: {
+    RecentCases,
     RecentOrders
   }
 }

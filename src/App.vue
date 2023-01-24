@@ -1,9 +1,10 @@
 <template>
+  <H2>Your Recent 3D Model Orders:</H2>
   <RecentOrdersList></RecentOrdersList>
 </template>
 
 <script>
-import { RecentOrdersList } from '@rad/hd-aurora';
+import { RecentOrdersList } from './components/RecentOrdersList.vue';
 
 
 export default {

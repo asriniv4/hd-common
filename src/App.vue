@@ -1,16 +1,15 @@
 <template>
-  <H2>Your Recent 3D Model Orders:</H2>
-  <RecentOrdersList></RecentOrdersList>
+  <RecentOrders />
 </template>
 
 <script>
-import { RecentOrdersList } from './components/RecentOrdersList.vue';
+import RecentOrders from './components/RecentOrders.vue';
 
 
 export default {
   name: 'App',
   components: {
-    RecentOrdersList,
+    RecentOrders
   }
 }
 </script>

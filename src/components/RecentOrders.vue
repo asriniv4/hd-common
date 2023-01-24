@@ -1,18 +1,18 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import RecentOrderDetail from './RecentOrderDetail.vue';
+import OrderDetail from './OrderDetail.vue';
 
 const orders = ref(null);
 
 const GET_RECENT_ORDERS_URL = 'https://common.ismorebetter.com/.netlify/functions/get-recent-orders';
-console.log('recent orders list')
 
 onMounted(() => {
-  console.log('mounted!!!!')
+  console.log('recent orders mounted')
   axios.get(GET_RECENT_ORDERS_URL)
     .then((response) => {
       orders.value = response.data;
+      console.log("the response:")
       console.log(response)
     })
     .catch((error) => {
@@ -22,12 +22,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="orders-list">
-    <h2>Recent 3D Model Orders:</h2>
-    <ul>
-      <RecentOrderDetail v-for="order in orders" :key="order.id" :order="order" />
-    </ul>
-  </div>
+  <ul>
+    <OrderDetail v-for="order in orders" :key="order.id" :order="order" />
+  </ul>
 </template>
 
 <style scoped>

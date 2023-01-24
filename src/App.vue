@@ -1,14 +1,15 @@
 <template>
-  <HelloWorld msg="Clinician Dashboard Micro Frontend App"/>
+  <RecentOrdersList></RecentOrdersList>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { RecentOrdersList } from '@rad/hd-aurora';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    RecentOrdersList,
   }
 }
 </script>

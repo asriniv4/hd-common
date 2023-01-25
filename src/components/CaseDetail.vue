@@ -43,7 +43,7 @@ onMounted(() => {
           </div>  
         </div>
         <a v-else :href="recentCase.video_url">
-          <img :src="thumbnailUrl" />
+          <img class="thumbnail" :src="thumbnailUrl" />
         </a>
         <div><strong>Primary:&nbsp;</strong>{{ recentCase.primary_surgeon }}</div>
         <div><strong>Secondary:&nbsp;</strong>{{  recentCase.secondary_surgeon }}</div>
@@ -53,4 +53,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
+img.thumbnail {
+  width: 100%
+}
 </style>
